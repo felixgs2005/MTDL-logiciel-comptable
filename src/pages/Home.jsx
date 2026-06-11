@@ -15,6 +15,15 @@ const highlights = [
   { num: '4.9/5', label: 'Note moyenne' },
 ]
 
+const quickServices = [
+  'Tenue de livres',
+  'États financiers',
+  'TPS / TVQ / DAS',
+  'Feuillets fiscaux',
+  'Planification fiscale',
+  'Soutien administratif',
+]
+
 export default function Home() {
   return (
     <div className={styles.page}>
@@ -50,6 +59,16 @@ export default function Home() {
               <img src={cellphone} alt="Application MTDL+" />
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className={styles.quickServices}>
+        <div className={`container ${styles.quickServicesInner}`}>
+          {quickServices.map(s => (
+            <div key={s} className={styles.quickService}>
+              <span className={styles.quickServiceLabel}>{s}</span>
+            </div>
+          ))}
         </div>
       </section>
 

@@ -23,9 +23,11 @@ export default function SaviezVousQue() {
         <div className={styles.grid}>
           {facts.map(f => (
             <div key={f.q} className={styles.card}>
-              <span className={styles.cat}>{f.cat}</span>
-              <h3 className={styles.question}>{f.q}</h3>
-              <p className={styles.answer}>{f.a}</p>
+              <div className={styles.catBar}><span className={styles.cat}>{f.cat}</span></div>
+              <div className={styles.cardBody}>
+                <h3 className={styles.question}>{f.q}</h3>
+                <p className={styles.answer}>{f.a}</p>
+              </div>
             </div>
           ))}
         </div>

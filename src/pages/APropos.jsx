@@ -71,6 +71,8 @@ export default function APropos() {
 
         <h2 className={styles.sectionTitle}>L'équipe</h2>
         <div className={styles.team}>
+
+          {/* Monika — carte détaillée avec photo */}
           <div className={styles.memberFeatured}>
             <div className={styles.memberPhotoWrap}>
               <img src={PHOTO_URL} alt="Monika Charlebois" className={styles.memberPhoto} />
@@ -91,6 +93,7 @@ export default function APropos() {
               </ul>
             </div>
           </div>
+
         </div>
       </div>
     </div>

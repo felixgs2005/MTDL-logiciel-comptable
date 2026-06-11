@@ -4,27 +4,27 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin-bottom: 64px;
-  border: 1px solid var(--border);
+  border: 2px solid var(--teal);
   border-radius: var(--radius);
   overflow: hidden;
-  background: var(--white);
 }
 .serviceItem {
   display: flex;
   align-items: flex-start;
   gap: 16px;
   padding: 22px 28px;
-  border-bottom: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--teal-light);
   font-size: 14.5px;
   color: var(--ink-soft);
   line-height: 1.5;
   transition: background 0.15s;
+  background: var(--white);
 }
-.serviceItem:hover { background: var(--teal-pale); }
-.serviceItem:nth-child(odd) { border-right: 1px solid var(--border-light); }
+.serviceItem:hover { background: var(--teal-light); }
+.serviceItem:nth-child(odd) { border-right: 1px solid var(--teal-light); }
 .check {
-  color: var(--teal);
-  background: var(--teal-light);
+  color: var(--white);
+  background: var(--teal);
   width: 22px;
   height: 22px;
   border-radius: 50%;
@@ -42,24 +42,22 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 56px 24px;
-  background: var(--cream);
+  padding: 64px 24px;
+  background: var(--teal);
   border-radius: var(--radius);
-  border: 1px solid var(--border-light);
 }
-.cta p { font-size: 16px; color: var(--stone); margin-bottom: 20px; }
+.cta p { font-size: 17px; color: rgba(255,255,255,0.85); margin-bottom: 22px; font-family: var(--font-display); }
 .ctaBtn {
   display: inline-block;
   font-size: 14px;
   font-weight: 600;
-  color: var(--white);
-  background: var(--teal);
+  color: var(--teal);
+  background: var(--white);
   padding: 13px 32px;
   border-radius: var(--radius-sm);
-  transition: background 0.15s, box-shadow 0.15s;
-  letter-spacing: 0.01em;
+  transition: opacity 0.15s, transform 0.15s;
 }
-.ctaBtn:hover { background: var(--teal-dark); box-shadow: 0 4px 16px rgba(19,132,151,0.25); }
+.ctaBtn:hover { opacity: 0.92; transform: translateY(-1px); }
 
 @media (max-width: 640px) {
   .serviceList { grid-template-columns: 1fr; }

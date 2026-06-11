@@ -25,16 +25,12 @@ export default function TenueLivres() {
         <div className="container">
           <span className={styles.heroTealEyebrow}>Service phare</span>
           <h1 className={styles.heroTealTitle}>Tenue de livres</h1>
-          <p className={styles.heroTealSub}>
-            Confiez-nous votre comptabilité quotidienne et concentrez-vous
-            sur ce que vous faites de mieux : développer votre entreprise.
-          </p>
+          <p className={styles.heroTealSub}>Confiez-nous votre comptabilité quotidienne et concentrez-vous sur ce que vous faites de mieux : développer votre entreprise.</p>
           <a href="https://calendar.app.google/HDQ9tgi7x5n7YTrg8" target="_blank" rel="noopener noreferrer" className={styles.heroTealBtn}>
             Demander une soumission gratuite
           </a>
         </div>
       </div>
-
       <div className="container">
         <div className={styles.sectionLabel}>Le processus</div>
         <h2 className={styles.sectionTitle}>Comment ça fonctionne</h2>
@@ -47,24 +43,22 @@ export default function TenueLivres() {
             </div>
           ))}
         </div>
-
         <div className={styles.includes}>
-          <div>
+          <div className={styles.includesLeft}>
             <h2 className={styles.includesTitle}>Ce qui est inclus</h2>
-            <p className={styles.includesDesc}>
-              Notre service de tenue de livres couvre tous vos besoins comptables
-              de base pour que vos finances soient toujours propres et à jour.
-            </p>
-            <a href="mailto:infos@mtdl.ca" className={styles.btnOutline}>Discuter de vos besoins</a>
+            <p className={styles.includesDesc}>Notre service de tenue de livres couvre tous vos besoins comptables de base pour que vos finances soient toujours propres et à jour.</p>
+            <a href="mailto:infos@mtdl.ca" className={styles.btnWhite}>Discuter de vos besoins</a>
           </div>
-          <ul className={styles.list}>
-            {includes.map(item => (
-              <li key={item} className={styles.listItem}>
-                <span className={styles.check}>✓</span>
-                {item}
-              </li>
-            ))}
-          </ul>
+          <div className={styles.includesRight}>
+            <ul className={styles.list}>
+              {includes.map(item => (
+                <li key={item} className={styles.listItem}>
+                  <span className={styles.check}>✓</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </div>
