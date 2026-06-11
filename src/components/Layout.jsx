@@ -114,7 +114,7 @@ export default function Layout() {
             <a href="https://mtdl-app.web.app/"
               target="_blank"
               rel="noopener noreferrer"
-              className={styles.link}
+              className={styles.footerLink}
             >
               Logiciel à venir
             </a>
