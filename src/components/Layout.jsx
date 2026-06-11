@@ -43,7 +43,7 @@ export default function Layout() {
               Logiciel à venir
             </a>
           </nav>
-          <a href="tel:8195607001" className={styles.cta}>819-560-7001</a>
+          <a href="tel:+18195607001" className={styles.cta}>819-560-7001</a>
           <button className={styles.burger} onClick={() => setOpen(o => !o)} aria-label="Menu" aria-expanded={open}>
             <span className={`${styles.bar} ${open ? styles.barOpen1 : ''}`} />
             <span className={`${styles.bar} ${open ? styles.barOpen2 : ''}`} />
@@ -61,7 +61,7 @@ export default function Layout() {
             <a href="https://mtdl-app.web.app/" target="_blank" rel="noopener noreferrer" className={styles.mobileLink}>
               Logiciel à venir
             </a>
-            <a href="tel:8195607001" className={styles.mobileCta}>819-560-7001</a>
+            <a href="tel:+18195607001" className={styles.mobileCta}>819-560-7001</a>
           </div>
         )}
       </header>
@@ -86,7 +86,7 @@ export default function Layout() {
           </div>
           <div className={styles.footerContact}>
             <p className={styles.footerHead}>Contact</p>
-            <a href="tel:8195607001">819-560-7001</a>
+            <a href="tel:+18195607001">819-560-7001</a>
             <a href="mailto:infos@mtdl.ca">infos@mtdl.ca</a>
             <p>1300 Boul. du Mi-Vallon<br />Suite 111A, Sherbrooke</p>
             <a href="https://calendar.app.google/HDQ9tgi7x5n7YTrg8" target="_blank" rel="noopener noreferrer" className={styles.footerBtn}>

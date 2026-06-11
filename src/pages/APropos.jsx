@@ -42,7 +42,7 @@ export default function APropos() {
             </div>
             <div className={styles.infoItem}>
               <span className={styles.infoLabel}>Téléphone</span>
-              <a href="tel:8195607001">819-560-7001</a>
+              <a href="tel:+18195607001">819-560-7001</a>
             </div>
             <div className={styles.infoItem}>
               <span className={styles.infoLabel}>Courriel</span>

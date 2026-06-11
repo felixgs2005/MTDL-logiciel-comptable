@@ -107,7 +107,7 @@ export default function Home() {
             <a href="https://calendar.app.google/HDQ9tgi7x5n7YTrg8" target="_blank" rel="noopener noreferrer" className={styles.ctaBtn}>
               Prendre rendez-vous
             </a>
-            <a href="tel:8195607001" className={styles.ctaBtnOutline}>819-560-7001</a>
+            <a href="tel:+18195607001" className={styles.ctaBtnOutline}>819-560-7001</a>
           </div>
         </div>
       </section>

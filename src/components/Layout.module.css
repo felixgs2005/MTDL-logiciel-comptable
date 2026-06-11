@@ -151,7 +151,11 @@
   align-self: flex-start;
   transition: opacity 0.15s;
 }
-.footerBtn:hover { opacity: 0.9; }
+
+.footerBtn:hover {
+  color: var(--teal);
+  
+}
 
 .footerDivider { border: none; border-top: 1px solid rgba(255,255,255,0.1); }
 .footerBottom {
