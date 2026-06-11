@@ -153,7 +153,7 @@
 }
 
 .footerBtn:hover {
-  color: var(--teal);
+  color: var(--teal) !important;
   
 }
 
