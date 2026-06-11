@@ -18,11 +18,11 @@ const services = [
 export default function Services() {
   return (
     <div className={styles.page}>
-      <div className={styles.hero}>
+      <div className="pageHero">
         <div className="container">
-          <span className={styles.eyebrow}>Ce que nous faisons</span>
-          <h1 className={styles.title}>Nos services</h1>
-          <p className={styles.sub}>
+          <span className="pageEyebrow">Ce que nous faisons</span>
+          <h1 className="pageTitle">Nos services</h1>
+          <p className="pageSub">
             Une offre complète pour vous libérer des contraintes administratives
             et financières de votre entreprise.
           </p>
@@ -38,7 +38,6 @@ export default function Services() {
             </div>
           ))}
         </div>
-
         <div className={styles.cta}>
           <p>Vous avez des besoins particuliers ?</p>
           <a href="mailto:infos@mtdl.ca" className={styles.ctaBtn}>Contactez-nous</a>

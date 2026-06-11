@@ -21,52 +21,41 @@ const includes = [
 export default function TenueLivres() {
   return (
     <div className={styles.page}>
-      <div className={styles.hero}>
+      <div className={styles.heroTeal}>
         <div className="container">
-          <span className={styles.eyebrow}>Service phare</span>
-          <h1 className={styles.title}>Tenue de livres</h1>
-          <p className={styles.sub}>
+          <span className={styles.heroTealEyebrow}>Service phare</span>
+          <h1 className={styles.heroTealTitle}>Tenue de livres</h1>
+          <p className={styles.heroTealSub}>
             Confiez-nous votre comptabilité quotidienne et concentrez-vous
             sur ce que vous faites de mieux : développer votre entreprise.
           </p>
-          <a
-            href="https://calendar.app.google/HDQ9tgi7x5n7YTrg8"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.btn}
-          >
+          <a href="https://calendar.app.google/HDQ9tgi7x5n7YTrg8" target="_blank" rel="noopener noreferrer" className={styles.heroTealBtn}>
             Demander une soumission gratuite
           </a>
         </div>
       </div>
 
       <div className="container">
-        <div className={styles.section}>
-          <h2 className={styles.sectionTitle}>Comment ça fonctionne</h2>
-          <div className={styles.steps}>
-            {steps.map(s => (
-              <div key={s.num} className={styles.step}>
-                <div className={styles.stepNum}>{s.num}</div>
-                <h3 className={styles.stepTitle}>{s.title}</h3>
-                <p className={styles.stepDesc}>{s.desc}</p>
-              </div>
-            ))}
-          </div>
+        <div className={styles.sectionLabel}>Le processus</div>
+        <h2 className={styles.sectionTitle}>Comment ça fonctionne</h2>
+        <div className={styles.steps}>
+          {steps.map(s => (
+            <div key={s.num} className={styles.step}>
+              <div className={styles.stepNum}>{s.num}</div>
+              <h3 className={styles.stepTitle}>{s.title}</h3>
+              <p className={styles.stepDesc}>{s.desc}</p>
+            </div>
+          ))}
         </div>
 
         <div className={styles.includes}>
-          <div className={styles.includesText}>
-            <h2 className={styles.sectionTitle}>Ce qui est inclus</h2>
+          <div>
+            <h2 className={styles.includesTitle}>Ce qui est inclus</h2>
             <p className={styles.includesDesc}>
               Notre service de tenue de livres couvre tous vos besoins comptables
               de base pour que vos finances soient toujours propres et à jour.
             </p>
-            <a
-              href="mailto:infos@mtdl.ca"
-              className={styles.btnOutline}
-            >
-              Discuter de vos besoins
-            </a>
+            <a href="mailto:infos@mtdl.ca" className={styles.btnOutline}>Discuter de vos besoins</a>
           </div>
           <ul className={styles.list}>
             {includes.map(item => (

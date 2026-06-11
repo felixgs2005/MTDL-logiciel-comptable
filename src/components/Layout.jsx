@@ -19,10 +19,9 @@ export default function Layout() {
   const location = useLocation()
 
   useEffect(() => { setOpen(false) }, [location])
-
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
-    window.addEventListener('scroll', onScroll)
+    window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
@@ -31,62 +30,35 @@ export default function Layout() {
       <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
         <div className={`container ${styles.nav}`}>
           <Link to="/" className={styles.logo}>
-            <img src={logoGradient} alt="MTDL+" height="42" />
+            <img src={logoGradient} alt="MTDL+" />
           </Link>
-
-          <nav className={`${styles.desktopNav}`}>
+          <nav className={styles.desktopNav}>
             {navLinks.map(l => (
-              <NavLink
-                key={l.to}
-                to={l.to}
-                end={l.exact}
-                className={({ isActive }) => `${styles.link} ${isActive ? styles.active : ''}`}
-              >
+              <NavLink key={l.to} to={l.to} end={l.exact}
+                className={({ isActive }) => `${styles.link} ${isActive ? styles.active : ''}`}>
                 {l.label}
               </NavLink>
             ))}
-            <a href="https://mtdl-app.web.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.link}
-            >
+            <a href="https://mtdl-app.web.app/" target="_blank" rel="noopener noreferrer" className={styles.link}>
               Logiciel à venir
             </a>
           </nav>
-
-          <a href="tel:8195607001" className={styles.cta}>
-            819-560-7001
-          </a>
-
-          <button
-            className={styles.burger}
-            onClick={() => setOpen(o => !o)}
-            aria-label="Menu"
-            aria-expanded={open}
-          >
+          <a href="tel:8195607001" className={styles.cta}>819-560-7001</a>
+          <button className={styles.burger} onClick={() => setOpen(o => !o)} aria-label="Menu" aria-expanded={open}>
             <span className={`${styles.bar} ${open ? styles.barOpen1 : ''}`} />
             <span className={`${styles.bar} ${open ? styles.barOpen2 : ''}`} />
             <span className={`${styles.bar} ${open ? styles.barOpen3 : ''}`} />
           </button>
         </div>
-
         {open && (
           <div className={styles.mobileMenu}>
             {navLinks.map(l => (
-              <NavLink
-                key={l.to}
-                to={l.to}
-                end={l.exact}
-                className={({ isActive }) => `${styles.mobileLink} ${isActive ? styles.active : ''}`}
-              >
+              <NavLink key={l.to} to={l.to} end={l.exact}
+                className={({ isActive }) => `${styles.mobileLink} ${isActive ? styles.active : ''}`}>
                 {l.label}
               </NavLink>
             ))}
-            <a href="https://mtdl-app.web.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.link}
-            >
+            <a href="https://mtdl-app.web.app/" target="_blank" rel="noopener noreferrer" className={styles.mobileLink}>
               Logiciel à venir
             </a>
             <a href="tel:8195607001" className={styles.mobileCta}>819-560-7001</a>
@@ -94,28 +66,21 @@ export default function Layout() {
         )}
       </header>
 
-      <main className={styles.main}>
-        <Outlet />
-      </main>
-
+      <main className={styles.main}><Outlet /></main>
       <ScrollToTop />
 
       <footer className={styles.footer}>
         <div className={`container ${styles.footerInner}`}>
           <div className={styles.footerBrand}>
-            <img src={logoGradient} alt="MTDL+" height="36" />
-            <p>Services comptables et tenue de livres à Sherbrooke.</p>
+            <img src={logoGradient} alt="MTDL+" />
+            <p>Services comptables et tenue de livres à Sherbrooke et en Estrie.</p>
           </div>
           <div className={styles.footerLinks}>
             <p className={styles.footerHead}>Navigation</p>
             {navLinks.map(l => (
               <Link key={l.to} to={l.to} className={styles.footerLink}>{l.label}</Link>
             ))}
-            <a href="https://mtdl-app.web.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.footerLink}
-            >
+            <a href="https://mtdl-app.web.app/" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>
               Logiciel à venir
             </a>
           </div>
@@ -124,18 +89,14 @@ export default function Layout() {
             <a href="tel:8195607001">819-560-7001</a>
             <a href="mailto:infos@mtdl.ca">infos@mtdl.ca</a>
             <p>1300 Boul. du Mi-Vallon<br />Suite 111A, Sherbrooke</p>
-            <a
-              href="https://calendar.app.google/HDQ9tgi7x5n7YTrg8"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.footerBtn}
-            >
+            <a href="https://calendar.app.google/HDQ9tgi7x5n7YTrg8" target="_blank" rel="noopener noreferrer" className={styles.footerBtn}>
               Prendre rendez-vous
             </a>
           </div>
         </div>
+        <hr className={styles.footerDivider} />
         <div className={styles.footerBottom}>
-          <span>© {new Date().getFullYear()} MTDL Services comptables. Tous droits réservés.</span>
+          © {new Date().getFullYear()} MTDL Services comptables. Tous droits réservés.
         </div>
       </footer>
     </div>

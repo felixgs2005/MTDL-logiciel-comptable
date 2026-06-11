@@ -2,15 +2,15 @@ import { Link } from 'react-router-dom'
 import cellphone from '../assets/cellphone.webp'
 import styles from './Home.module.css'
 
-const values = [
-  { icon: '', title: "Professionnalisme", desc: "Un service précis, ponctuel et conforme aux normes en vigueur." },
-  { icon: '', title: "Proximité", desc: "Une écoute attentive et un accompagnement véritablement personnalisé." },
-  { icon: '', title: "Excellence", desc: "La recherche constante de la qualité et de l'amélioration continue." },
-  { icon: '', title: "Intégrité", desc: "Des relations fondées sur la confiance et la transparence totale." },
+const pillars = [
+  { title: 'Professionnalisme', desc: 'Un service précis, ponctuel et conforme aux normes en vigueur.' },
+  { title: 'Proximité', desc: 'Une écoute attentive et un accompagnement véritablement personnalisé.' },
+  { title: 'Excellence', desc: 'La recherche constante de la qualité et de l\'amélioration continue.' },
+  { title: 'Intégrité', desc: 'Des relations fondées sur la confiance et la transparence totale.' },
 ]
 
 const highlights = [
-  { num: '10+', label: 'Années dexpérience' },
+  { num: '10+', label: 'Années d\'expérience' },
   { num: '200+', label: 'Clients accompagnés' },
   { num: '4.9/5', label: 'Note moyenne' },
 ]
@@ -18,8 +18,8 @@ const highlights = [
 export default function Home() {
   return (
     <div className={styles.page}>
-      {/* HERO */}
       <section className={styles.hero}>
+        <div className={styles.heroBg} aria-hidden="true" />
         <div className={`container ${styles.heroInner}`}>
           <div className={styles.heroText}>
             <span className={styles.eyebrow}>Sherbrooke · Estrie</span>
@@ -31,12 +31,7 @@ export default function Home() {
               tenue de livres, fiscalité, et bien plus.
             </p>
             <div className={styles.heroActions}>
-              <a
-                href="https://calendar.app.google/HDQ9tgi7x5n7YTrg8"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.btnPrimary}
-              >
+              <a href="https://calendar.app.google/HDQ9tgi7x5n7YTrg8" target="_blank" rel="noopener noreferrer" className={styles.btnPrimary}>
                 Prendre rendez-vous
               </a>
               <Link to="/services" className={styles.btnOutline}>Nos services</Link>
@@ -58,38 +53,31 @@ export default function Home() {
         </div>
       </section>
 
-      {/* MISSION */}
       <section className={styles.mission}>
         <div className={`container ${styles.missionInner}`}>
-          <div className={styles.missionLabel}>Notre mission</div>
-          <h2 className={styles.missionTitle}>
-            Vous simplifier la vie,<br />pour que vous vous<br />
-            <em>concentriez sur l'essentiel.</em>
-          </h2>
-          <p className={styles.missionText}>
-            Que ce soit pour des besoins administratifs, comptables ou créatifs,
-            nous mettons notre expertise à votre service avec fiabilité et bienveillance.
-          </p>
-        </div>
-      </section>
-
-      {/* VALUES */}
-      <section className={styles.values}>
-        <div className="container">
-          <h2 className={styles.sectionTitle}>Nos valeurs</h2>
-          <div className={styles.valuesGrid}>
-            {values.map(v => (
-              <div key={v.title} className={styles.valueCard}>
-
-                <h3 className={styles.valueTitle}>{v.title}</h3>
-                <p className={styles.valueDesc}>{v.desc}</p>
+          <div className={styles.missionLeft}>
+            <div className={styles.missionLabel}>Notre mission</div>
+            <h2 className={styles.missionTitle}>
+              Vous simplifier la vie,<br />
+              pour que vous vous<br />
+              <em>concentriez sur l'essentiel.</em>
+            </h2>
+            <p className={styles.missionText}>
+              Que ce soit pour des besoins administratifs, comptables ou créatifs,
+              nous mettons notre expertise à votre service avec fiabilité et bienveillance.
+            </p>
+          </div>
+          <div className={styles.missionRight}>
+            {pillars.map(p => (
+              <div key={p.title} className={styles.missionPillar}>
+                <div className={styles.pillarTitle}>{p.title}</div>
+                <div className={styles.pillarDesc}>{p.desc}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA BAND */}
       <section className={styles.ctaBand}>
         <div className={`container ${styles.ctaInner}`}>
           <div>
@@ -97,12 +85,7 @@ export default function Home() {
             <p className={styles.ctaSub}>Chaque client mérite une attention unique.</p>
           </div>
           <div className={styles.ctaButtons}>
-            <a
-              href="https://calendar.app.google/HDQ9tgi7x5n7YTrg8"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.ctaBtn}
-            >
+            <a href="https://calendar.app.google/HDQ9tgi7x5n7YTrg8" target="_blank" rel="noopener noreferrer" className={styles.ctaBtn}>
               Prendre rendez-vous
             </a>
             <a href="tel:8195607001" className={styles.ctaBtnOutline}>819-560-7001</a>

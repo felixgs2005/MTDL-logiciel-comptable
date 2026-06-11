@@ -8,13 +8,12 @@ const team = [
 export default function APropos() {
   return (
     <div className={styles.page}>
-      <div className={styles.hero}>
+      <div className="pageHero">
         <div className="container">
-          <span className={styles.eyebrow}>Notre histoire</span>
-          <h1 className={styles.title}>À propos de MTDL</h1>
+          <span className="pageEyebrow">Notre histoire</span>
+          <h1 className="pageTitle">À propos de MTDL</h1>
         </div>
       </div>
-
       <div className="container">
         <div className={styles.intro}>
           <div className={styles.introText}>
@@ -49,41 +48,34 @@ export default function APropos() {
             </div>
             <div className={styles.infoItem}>
               <span className={styles.infoLabel}>Rendez-vous</span>
-              <a
-                href="https://calendar.app.google/HDQ9tgi7x5n7YTrg8"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.rdvLink}
-              >
+              <a href="https://calendar.app.google/HDQ9tgi7x5n7YTrg8" target="_blank" rel="noopener noreferrer" className={styles.rdvLink}>
                 Réserver en ligne →
               </a>
             </div>
           </div>
         </div>
 
-        <div className={styles.mission}>
-          <h2 className={styles.missionTitle}>Notre mission</h2>
-          <p className={styles.missionText}>
-            Accompagner nos clients dans leurs projets en leur offrant un service fiable, humain et
-            sur mesure. Que ce soit pour des besoins administratifs, comptables ou créatifs, nous
-            mettons notre expertise à votre service pour vous simplifier la vie et vous permettre de
-            vous concentrer sur l'essentiel.
-          </p>
-        </div>
+        <hr className={styles.divider} />
 
-        <div className={styles.teamSection}>
-          <h2 className={styles.sectionTitle}>L'équipe</h2>
-          <div className={styles.team}>
-            {team.map(m => (
-              <div key={m.name} className={styles.member}>
-                <div className={styles.avatar}>{m.initials}</div>
-                <div>
-                  <div className={styles.memberName}>{m.name}</div>
-                  <div className={styles.memberRole}>{m.role}</div>
-                </div>
+        <h2 className={styles.missionTitle}>Notre mission</h2>
+        <p className={styles.missionText}>
+          Accompagner nos clients dans leurs projets en leur offrant un service fiable, humain et
+          sur mesure. Que ce soit pour des besoins administratifs, comptables ou créatifs, nous
+          mettons notre expertise à votre service pour vous simplifier la vie et vous permettre de
+          vous concentrer sur l'essentiel.
+        </p>
+
+        <h2 className={styles.sectionTitle}>L'équipe</h2>
+        <div className={styles.team}>
+          {team.map(m => (
+            <div key={m.name} className={styles.member}>
+              <div className={styles.avatar}>{m.initials}</div>
+              <div>
+                <div className={styles.memberName}>{m.name}</div>
+                <div className={styles.memberRole}>{m.role}</div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
