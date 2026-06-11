@@ -1,8 +1,10 @@
 import styles from './APropos.module.css'
 
-const team = [
-  { initials: 'ML', name: 'Marie-Lou', role: 'Fondatrice & Comptable principale' },
-  { initials: 'AC', name: 'Annick', role: 'Tenue de livres & Paie' },
+const PHOTO_URL = 'https://static.wixstatic.com/media/ed63de_594b6f38642f404bae9552f2846c2557~mv2.jpg/v1/fill/w_258,h_256,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/403843488_122138610746015698_3907623328066767174_n.jpg'
+
+const accreditations = [
+  'Accréditée auprès de Revenu Québec pour la production et la transmission électronique des déclarations de revenus et des taxes',
+  'Représentante autorisée auprès de l\'Agence du revenu du Canada (ARC) pour entreprises incorporées et travailleurs autonomes',
 ]
 
 export default function APropos() {
@@ -65,17 +67,30 @@ export default function APropos() {
           vous concentrer sur l'essentiel.
         </p>
 
+        <hr className={styles.divider} />
+
         <h2 className={styles.sectionTitle}>L'équipe</h2>
         <div className={styles.team}>
-          {team.map(m => (
-            <div key={m.name} className={styles.member}>
-              <div className={styles.avatar}>{m.initials}</div>
-              <div>
-                <div className={styles.memberName}>{m.name}</div>
-                <div className={styles.memberRole}>{m.role}</div>
-              </div>
+          <div className={styles.memberFeatured}>
+            <div className={styles.memberPhotoWrap}>
+              <img src={PHOTO_URL} alt="Monika Charlebois" className={styles.memberPhoto} />
             </div>
-          ))}
+            <div className={styles.memberFeaturedInfo}>
+              <div className={styles.memberFeaturedName}>Monika Charlebois</div>
+              <div className={styles.memberFeaturedRole}>Présidente · Technicienne comptable</div>
+              <p className={styles.memberFeaturedDesc}>
+                Spécialisée en comptabilité pour travailleurs autonomes et entreprises incorporées.
+              </p>
+              <ul className={styles.accreditations}>
+                {accreditations.map(a => (
+                  <li key={a} className={styles.accreditationItem}>
+                    <span className={styles.accreditationDot} />
+                    {a}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
