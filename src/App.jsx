@@ -18,7 +18,6 @@ export default function App() {
         <Route path="saviez-vous-que" element={<SaviezVousQue />} />
         <Route path="a-propos" element={<APropos />} />
         <Route path="tenue-de-livres" element={<TenueLivres />} />
-        <Route path="logiciel" element={<Logiciel />} />
       </Route>
     </Routes>
   )

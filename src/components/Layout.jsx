@@ -11,7 +11,6 @@ const navLinks = [
   { to: '/avis', label: 'Nos avis' },
   { to: '/saviez-vous-que', label: 'Saviez-vous que…' },
   { to: '/a-propos', label: 'À propos' },
-  { to: '/logiciel', label: 'Logiciel à venir' },
 ]
 
 export default function Layout() {
@@ -46,6 +45,13 @@ export default function Layout() {
                 {l.label}
               </NavLink>
             ))}
+            <a href="https://mtdl-app.web.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.link}
+            >
+              Logiciel à venir
+            </a>
           </nav>
 
           <a href="tel:8195607001" className={styles.cta}>
@@ -76,6 +82,13 @@ export default function Layout() {
                 {l.label}
               </NavLink>
             ))}
+            <a href="https://mtdl-app.web.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.link}
+            >
+              Logiciel à venir
+            </a>
             <a href="tel:8195607001" className={styles.mobileCta}>819-560-7001</a>
           </div>
         )}
@@ -98,6 +111,13 @@ export default function Layout() {
             {navLinks.map(l => (
               <Link key={l.to} to={l.to} className={styles.footerLink}>{l.label}</Link>
             ))}
+            <a href="https://mtdl-app.web.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.link}
+            >
+              Logiciel à venir
+            </a>
           </div>
           <div className={styles.footerContact}>
             <p className={styles.footerHead}>Contact</p>
