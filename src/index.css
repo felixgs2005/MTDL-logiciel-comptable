@@ -1,0 +1,44 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --teal: #138497;
+  --teal-dark: #0d6575;
+  --teal-light: #e8f5f7;
+  --teal-mid: #1a9cb5;
+  --ink: #0f1d22;
+  --ink-soft: #2a3d42;
+  --stone: #6b8188;
+  --cream: #f7fafb;
+  --white: #ffffff;
+  --border: #d4e8ec;
+  --font-display: 'DM Serif Display', serif;
+  --font-body: 'Inter', sans-serif;
+  --radius: 12px;
+  --shadow: 0 2px 20px rgba(19,132,151,0.08);
+  --shadow-md: 0 8px 40px rgba(19,132,151,0.14);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+img { max-width: 100%; display: block; }
+
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb { background: var(--teal); border-radius: 3px; }
