@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import cellphone from '../assets/cellphone.webp'
+import cellphone from './assets/cellphone.webp'
 import styles from './Home.module.css'
 
 const values = [

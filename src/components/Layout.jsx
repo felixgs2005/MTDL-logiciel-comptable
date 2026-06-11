@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Outlet, NavLink, Link, useLocation } from 'react-router-dom'
-import logoGradient from '../assets/logo-gradient.webp'
+import logoGradient from './assets/logo-gradient.webp'
 import ScrollToTop from './ScrollToTop'
 import styles from './Layout.module.css'
 
