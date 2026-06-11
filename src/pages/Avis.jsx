@@ -1,12 +1,12 @@
 import styles from './Avis.module.css'
 
 const reviews = [
-  { name: 'Marie-Claude B.', stars: 5, text: 'Service exceptionnel, réactif et professionnel. Mon dossier est toujours impeccable. Je recommande MTDL sans hésitation à tous les entrepreneurs.' },
-  { name: 'Jean-François T.', stars: 5, text: 'Équipe compétente et très à lécoute. Ils ont simplifié ma comptabilité du jour au lendemain. Un investissement qui en vaut vraiment la peine.' },
-  { name: 'Amélie R.', stars: 5, text: 'Japprécie énormément la transparence et la rigueur. Les rapports sont clairs, les délais respectés. Exactement ce quon cherche dans un service comptable.' },
-  { name: 'Patrick L.', stars: 5, text: 'Très professionnel, disponible et toujours prêt à expliquer. Ma gestion financière est devenue beaucoup plus sereine depuis que je fais appel à MTDL.' },
-  { name: 'Isabelle M.', stars: 5, text: 'Un accompagnement humain et de qualité. On sent que léquipe comprend vraiment les besoins des petites entreprises. Service irréprochable.' },
-  { name: 'Sébastien D.', stars: 5, text: 'Rapide, précis, fiable. Ils ont pris en main mes livres en quelques jours et depuis je ne me soucie plus de rien. Vraiment au top.' },
+  { name: "Marie-Claude B.", stars: 5, text: "Service exceptionnel, réactif et professionnel. Mon dossier est toujours impeccable. Je recommande MTDL sans hésitation à tous les entrepreneurs." },
+  { name: "Jean-François T.", stars: 5, text: "Équipe compétente et très à lécoute. Ils ont simplifié ma comptabilité du jour au lendemain. Un investissement qui en vaut vraiment la peine." },
+  { name: "Amélie R.", stars: 5, text: "J'apprécie énormément la transparence et la rigueur. Les rapports sont clairs, les délais respectés. Exactement ce qu'on cherche dans un service comptable." },
+  { name: "Patrick L.", stars: 5, text: "Très professionnel, disponible et toujours prêt à expliquer. Ma gestion financière est devenue beaucoup plus sereine depuis que je fais appel à MTDL." },
+  { name: "Isabelle M.", stars: 5, text: "Un accompagnement humain et de qualité. On sent que l'équipe comprend vraiment les besoins des petites entreprises. Service irréprochable." },
+  { name: "Sébastien D.", stars: 5, text: "Rapide, précis, fiable. Ils ont pris en main mes livres en quelques jours et depuis je ne me soucie plus de rien. Vraiment au top." },
 ]
 
 function Stars({ count }) {

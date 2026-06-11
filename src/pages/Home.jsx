@@ -3,10 +3,10 @@ import cellphone from '../assets/cellphone.webp'
 import styles from './Home.module.css'
 
 const values = [
-  { icon: '', title: 'Professionnalisme', desc: 'Un service précis, ponctuel et conforme aux normes en vigueur.' },
-  { icon: '', title: 'Proximité', desc: 'Une écoute attentive et un accompagnement véritablement personnalisé.' },
-  { icon: '', title: 'Excellence', desc: 'La recherche constante de la qualité et de lamélioration continue.' },
-  { icon: '', title: 'Intégrité', desc: 'Des relations fondées sur la confiance et la transparence totale.' },
+  { icon: '', title: "Professionnalisme", desc: "Un service précis, ponctuel et conforme aux normes en vigueur." },
+  { icon: '', title: "Proximité", desc: "Une écoute attentive et un accompagnement véritablement personnalisé." },
+  { icon: '', title: "Excellence", desc: "La recherche constante de la qualité et de l'amélioration continue." },
+  { icon: '', title: "Intégrité", desc: "Des relations fondées sur la confiance et la transparence totale." },
 ]
 
 const highlights = [

@@ -10,7 +10,7 @@ const services = [
   {
     icon: '',
     title: 'États financiers',
-    desc: 'Préparation détats financiers clairs pour vous aider à prendre les bonnes décisions.',
+    desc: "Préparation d'états financiers clairs pour vous aider à prendre les bonnes décisions.",
     items: ['Bilan', 'État des résultats', 'Flux de trésorerie'],
   },
   {
