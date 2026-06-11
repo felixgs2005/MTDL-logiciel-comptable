@@ -8,16 +8,24 @@ import APropos from './pages/APropos'
 import TenueLivres from './pages/TenueLivres'
 import Logiciel from './pages/Logiciel'
 
+function ScrollToTopOnNav() {
+  const { pathname } = useLocation()
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+  return null
+}
+
 export default function App() {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />
-        <Route path="services" element={<Services />} />
-        <Route path="avis" element={<Avis />} />
-        <Route path="saviez-vous-que" element={<SaviezVousQue />} />
-        <Route path="a-propos" element={<APropos />} />
-        <Route path="tenue-de-livres" element={<TenueLivres />} />
+        <Route index element={<><ScrollToTopOnNav /><Home /></>} />
+        <Route path="services" element={<><ScrollToTopOnNav /><Services /></>} />
+        <Route path="avis" element={<><ScrollToTopOnNav />Avis  /></>} />
+        <Route path="saviez-vous-que" element={<><ScrollToTopOnNav /><SaviezVousQue /></>} />
+        <Route path="a-propos" element={<><ScrollToTopOnNav /><APropos /></>} />
+        <Route path="tenue-de-livres" element={<><ScrollToTopOnNav /><TenueLivres /></>} />
       </Route>
     </Routes>
   )
