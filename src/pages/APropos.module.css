@@ -36,7 +36,7 @@
 .infoItem:hover { background: rgba(255,255,255,0.1); }
 .infoLabel { font-size: 10.5px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.6); }
 .infoItem span { font-size: 13.5px; color: rgba(255,255,255,0.9); line-height: 1.5; }
-.infoItem a { font-size: 13.5px; color: var(--white); font-weight: 500; }
+.infoItem a { font-size: 13.5px; font-weight: 500; }
 .rdvLink {
   display: inline-block;
   margin-top: 4px;

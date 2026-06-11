@@ -117,7 +117,7 @@
   display: grid;
   grid-template-columns: 2fr 1fr 1.6fr;
   gap: 56px;
-  padding-bottom: 56px;
+  padding-bottom: 56px !important;
 }
 .footerBrand img { margin-bottom: 16px; height: 36px; width: auto; }
 .footerBrand p { font-size: 13.5px; line-height: 1.7; max-width: 240px; color: rgba(255,255,255,0.55); }
@@ -135,7 +135,7 @@
 .footerLink:hover { color: var(--white); }
 
 .footerContact { display: flex; flex-direction: column; gap: 10px; }
-.footerContact a { font-size: 13.5px; color: rgba(255,255,255,0.65); transition: color 0.15s; }
+.footerContact a { font-size: 13.5px; transition: color 0.15s; }
 .footerContact a:hover { color: var(--white); }
 .footerContact p { font-size: 13.5px; line-height: 1.6; color: rgba(255,255,255,0.45); }
 
