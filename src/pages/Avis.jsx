@@ -1,12 +1,11 @@
 import styles from './Avis.module.css'
 
 const reviews = [
-  { name: 'Marie-Claude B.', stars: 5, text: 'Service exceptionnel, réactif et professionnel. Mon dossier est toujours impeccable. Je recommande MTDL sans hésitation à tous les entrepreneurs.' },
-  { name: 'Jean-François T.', stars: 5, text: 'Équipe compétente et très à l\'écoute. Ils ont simplifié ma comptabilité du jour au lendemain. Un investissement qui en vaut vraiment la peine.' },
-  { name: 'Amélie R.', stars: 5, text: 'J\'apprécie énormément la transparence et la rigueur. Les rapports sont clairs, les délais respectés. Exactement ce qu\'on cherche dans un service comptable.' },
-  { name: 'Patrick L.', stars: 5, text: 'Très professionnel, disponible et toujours prêt à expliquer. Ma gestion financière est devenue beaucoup plus sereine depuis que je fais appel à MTDL.' },
-  { name: 'Isabelle M.', stars: 5, text: 'Un accompagnement humain et de qualité. On sent que l\'équipe comprend vraiment les besoins des petites entreprises. Service irréprochable.' },
-  { name: 'Sébastien D.', stars: 5, text: 'Rapide, précis, fiable. Ils ont pris en main mes livres en quelques jours et depuis je ne me soucie plus de rien. Vraiment au top.' },
+  { name: 'Marélie', stars: 5, text: 'Je suis extrêmement satisfaite avec les services de tenue de livres et de comptabilité pour mon entreprise. Monika est très professionnelle, très disponible et toujours à l’avance. Merci beaucoup pour ton service et ta patience !' },
+  { name: 'Ahmad', stars: 5, text: 'Je tiens à souligner l’excellence des services offerts par Mme Monika Charlebois, comptable. Son professionnalisme, sa rigueur et sa disponibilité constante sont grandement appréciés. Elle m’accompagne de façon exemplaire dans la gestion de la tenue de livres, de la paie, des cotisations, des relevés d’emploi ainsi que dans les démarches liées au départ d’une entreprise. Son expertise me permet d’avoir l’esprit en paix quant à la conformité et la saine gestion de mes obligations comptables. Je la recommande sans hésitation.' },
+  { name: 'Guillaume', stars: 5, text: 'Une jeune femme professionnelle et à l’écoute de vos exigences n’hésitez pas à contacter MTDL' },
+  { name: 'Jérémy', stars: 5, text: 'Service incroyable, apporte un grand soutien et donne de très bon conseil, avec toujours la vision d’aider à accroître ma compagnie et la rendre plus prospère d’années en année' },
+  { name: 'Jonathan​', stars: 5, text: 'Service impeccable et professionnel !! Je recommande' },
 ]
 
 function Stars({ count }) {
@@ -51,7 +50,7 @@ export default function Avis() {
         </div>
         <div className={styles.googleCta}>
           <p>Vous êtes client MTDL ? Partagez votre expérience.</p>
-          <a href="https://g.page/r/review" target="_blank" rel="noopener noreferrer" className={styles.ctaBtn}>
+          <a href="https://www.google.com/maps/place/MTDL+Services+comptables+et+tenue+de+livres/@45.3770713,-71.9817538,17z/data=!4m14!1m5!8m4!1e1!2s108628244987532312815!3m1!1e1!3m7!1s0x4cb64bc40c2c18e7:0x9a613d73a8a85000!8m2!3d45.3770676!4d-71.9791789!9m1!1b1!16s%2Fg%2F11l6xl5sym?hl=fr-CA&entry=ttu&g_ep=EgoyMDI2MDYwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className={styles.ctaBtn}>
             Laisser un avis Google
           </a>
         </div>
