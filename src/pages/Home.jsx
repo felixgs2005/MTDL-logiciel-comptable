@@ -33,7 +33,7 @@ export default function Home() {
           <div className={styles.heroText}>
             <span className={styles.eyebrow}>Sherbrooke · Estrie</span>
             <h1 className={styles.heroTitle}>
-              Services comptables <em>humains</em> et sur mesure.
+              Services comptables <em>humains</em> et sur mesure
             </h1>
             <p className={styles.heroSub}>
               MTDL accompagne les entrepreneurs et entreprises dans leur quotidien financier —
