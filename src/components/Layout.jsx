@@ -11,7 +11,6 @@ const navLinks = [
   { to: '/avis', label: 'Nos avis' },
   { to: '/saviez-vous-que', label: 'Saviez-vous que…' },
   { to: '/a-propos', label: 'À propos' },
-  { to: '/politique-confidentialite', label: 'Politique de confidentialité' },
 ]
 
 export default function Layout() {
@@ -84,6 +83,9 @@ export default function Layout() {
             <a href="https://mtdl-app.web.app/" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>
               Logiciel à venir
             </a>
+            <Link to="/politique-confidentialite" className={styles.footerLink}>
+              Politique de confidentialité
+            </Link>
           </div>
           <div className={styles.footerContact}>
             <p className={styles.footerHead}>Contact</p>
