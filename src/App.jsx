@@ -8,6 +8,7 @@ import SaviezVousQue from './pages/SaviezVousQue'
 import APropos from './pages/APropos'
 import TenueLivres from './pages/TenueLivres'
 import Logiciel from './pages/Logiciel'
+import PolitiqueConfidentialite from './pages/PolitiqueConfidentialite'
 
 function ScrollToTopOnNav() {
   const { pathname } = useLocation()
@@ -27,6 +28,7 @@ export default function App() {
         <Route path="saviez-vous-que" element={<><ScrollToTopOnNav /><SaviezVousQue /></>} />
         <Route path="a-propos" element={<><ScrollToTopOnNav /><APropos /></>} />
         <Route path="tenue-de-livres" element={<><ScrollToTopOnNav /><TenueLivres /></>} />
+        <Route path="politique-confidentialite" element={<><ScrollToTopOnNav /><PolitiqueConfidentialite /></>} />
       </Route>
     </Routes>
   )

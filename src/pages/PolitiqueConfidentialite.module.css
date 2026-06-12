@@ -1,0 +1,149 @@
+.page {
+  padding-bottom: 100px;
+}
+
+.content {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: 22px;
+  color: var(--teal);
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--teal-light);
+}
+
+.section p {
+  font-size: 15px;
+  color: var(--stone);
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+.section p:last-child {
+  margin-bottom: 0;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 14px 0;
+  padding-left: 4px;
+}
+.list li {
+  font-size: 15px;
+  color: var(--ink-soft);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1.5;
+}
+.list li::before {
+  content: "";
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--teal);
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+/* Bloc suppression — mis en valeur */
+.deletionSection {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+  background: var(--teal);
+  border-radius: var(--radius);
+  padding: 40px 40px;
+}
+.deletionIcon {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  margin-top: 2px;
+}
+.deletionTitle {
+  font-family: var(--font-display);
+  font-size: 22px;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+.deletionText {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.75;
+  margin-bottom: 20px;
+}
+.deletionBtn {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--teal);
+  background: var(--white);
+  padding: 11px 24px;
+  border-radius: var(--radius-sm);
+  transition:
+    opacity 0.15s,
+    transform 0.15s;
+  margin-bottom: 16px;
+}
+.deletionBtn:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+.deletionNote {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.65;
+  margin-top: 0;
+}
+
+.contactBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: var(--teal-light);
+  border-left: 4px solid var(--teal);
+  border-radius: var(--radius-sm);
+  padding: 20px 24px;
+  margin-top: 16px;
+}
+.contactBlock p {
+  font-size: 14.5px;
+  color: var(--ink-soft);
+  margin: 0;
+}
+.contactBlock strong {
+  color: var(--ink);
+}
+.contactBlock a {
+  font-size: 14.5px;
+  color: var(--teal);
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .deletionSection {
+    flex-direction: column;
+    gap: 20px;
+    padding: 28px 24px;
+  }
+  .content {
+    gap: 36px;
+  }
+}
