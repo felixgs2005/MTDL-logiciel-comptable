@@ -42,6 +42,9 @@ export default function Layout() {
             <a href="https://mtdl-app.web.app/" target="_blank" rel="noopener noreferrer" className={styles.link}>
               Logiciel à venir
             </a>
+            <Link to="/politique-confidentialite" className={styles.footerLink}>
+              Politique de confidentialité
+            </Link>
           </nav>
           <a href="tel:+18195607001" className={styles.cta}>819-560-7001</a>
           <button className={styles.burger} onClick={() => setOpen(o => !o)} aria-label="Menu" aria-expanded={open}>
@@ -61,7 +64,7 @@ export default function Layout() {
             <a href="https://mtdl-app.web.app/" target="_blank" rel="noopener noreferrer" className={styles.mobileLink}>
               Logiciel à venir
             </a>
-            <Link to="/politique-confidentialite" className={styles.footerLink}>
+            <Link to="/politique-confidentialite" className={styles.mobileLink}>
               Politique de confidentialité
             </Link>
             <a href="tel:+18195607001" className={styles.mobileCta}>819-560-7001</a>
