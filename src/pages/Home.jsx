@@ -2,6 +2,24 @@ import { Link } from 'react-router-dom'
 import cellphone from '../assets/cellphone.webp'
 import styles from './Home.module.css'
 
+const reviews = [
+  { name: 'Guillaume', stars: 5, text: 'Une jeune femme professionnelle et à l’écoute de vos exigences n’hésitez pas à contacter MTDL' },
+  { name: 'Jérémy', stars: 5, text: 'Service incroyable, apporte un grand soutien et donne de très bon conseil, avec toujours la vision d’aider à accroître ma compagnie et la rendre plus prospère d’années en année' },
+  { name: 'Jonathan​', stars: 5, text: 'Service impeccable et professionnel !! Je recommande' },
+]
+
+function Stars({ count }) {
+  return (
+    <div className={styles.stars}>
+      {Array.from({ length: count }).map((_, i) => (
+        <svg key={i} width="14" height="14" viewBox="0 0 14 14" fill="currentColor">
+          <path d="M7 1l1.545 3.09L12 4.635l-2.5 2.41.59 3.41L7 8.77l-3.09 1.685.59-3.41L2 4.635l3.455-.545L7 1z" />
+        </svg>
+      ))}
+    </div>
+  )
+}
+
 const pillars = [
   { title: 'Professionnalisme', desc: 'Un service précis, ponctuel et conforme aux normes en vigueur.' },
   { title: 'Proximité', desc: 'Une écoute attentive et un accompagnement véritablement personnalisé.' },
@@ -108,6 +126,27 @@ export default function Home() {
               Prendre rendez-vous
             </a>
             <a href="tel:+18195607001" className={styles.ctaBtnOutline}>819-560-7001</a>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.avisSection}>
+        <div className="container">
+          <div className={styles.avisHeader}>
+            <div className={styles.missionLabel}>Témoignages</div>
+            <h2 className={styles.avisTitle}>Ce que disent nos clients</h2>
+          </div>
+          <div className={styles.avisGrid}>
+            {reviews.map(r => (
+              <div key={r.name} className={styles.avisCard}>
+                <Stars />
+                <p className={styles.avisText}>"{r.text}"</p>
+                <div className={styles.avisAuthor}>
+                  <div className={styles.avisAvatar}>{r.name[0]}</div>
+                  <span className={styles.avisName}>{r.name}</span>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
